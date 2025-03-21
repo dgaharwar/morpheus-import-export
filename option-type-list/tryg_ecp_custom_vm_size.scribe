@@ -1,0 +1,14 @@
+resource "option-type-list" "tryg_ecp_custom_vm_size" {
+  name = "tryg_ecp_custom_vm_size"
+  uuid = "57e5abcf-2427-46b2-87f4-78c7025c7e87"
+  initialDataset = <<EOFSCRIBE
+'Medium - 2vCPU - 4GB RAM - 60 GB HDD','2vCPU_4GB_RAM;17836'
+'Large - 4vCPU - 8GB RAM - 60 GB HDD','4vCPU_8GB_RAM;17837'
+'XL - 8vCPU - 16GB RAM - 60 GB HDD','8vCPU_16GB_RAM;17838'
+'XXL - 16vCPU - 32GB RAM - 60 GB HDD','16vCPU_32GB_RAM;17839'
+'Custom','custom_t_shirt_tryg;17840'
+EOFSCRIBE
+  labels = [ "dg_209523" ]
+  type = "manual"
+  visibility = "public"
+}
