@@ -1,0 +1,9 @@
+resource "option-type" "tryg_ecp_appCode" {
+  code = "tryg_ecp_appCode"
+  name = "tryg_ecp_appCode"
+  uuid = "8e60c8d8-be7d-4897-826c-70b10949ca9c"
+  fieldContext = "config.customOptions"
+  fieldLabel = "tryg_ecp_appCode"
+  fieldName = "tryg_ecp_appCode"
+  labels = [ "dg_209523" ]
+}
