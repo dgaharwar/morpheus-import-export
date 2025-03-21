@@ -1,0 +1,9 @@
+resource "option-type" "tryg_shutdown_days" {
+  code = "tryg_shutdown_days"
+  name = "tryg_shutdown_days"
+  uuid = "e5b6ec3f-c6e2-4889-8d47-b88adcb00dbb"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Shutdown Days"
+  fieldName = "tryg_shutdown_days"
+  labels = [ "dg_209523" ]
+}

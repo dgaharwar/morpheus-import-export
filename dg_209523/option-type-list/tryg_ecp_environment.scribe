@@ -1,0 +1,7 @@
+resource "option-type-list" "tryg_ecp_environment" {
+  name = "tryg_ecp_environment"
+  uuid = "f7031857-ad14-4fba-bfca-85f78c5ded11"
+  initialDataset = "'Environment','Dev;1'"
+  labels = [ "dg_209523" ]
+  type = "manual"
+}

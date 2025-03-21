@@ -1,0 +1,7 @@
+resource "option-type-list" "tryg_ecp_ZoneWindows" {
+  name = "tryg_ecp_ZoneWindows"
+  uuid = "c8528178-666c-4067-a363-3173e26e9f18"
+  initialDataset = "'Demo','tryg_ecp_ZoneWindows;Demo;75;98;auto;2871;3078'"
+  labels = [ "dg_209523" ]
+  type = "manual"
+}

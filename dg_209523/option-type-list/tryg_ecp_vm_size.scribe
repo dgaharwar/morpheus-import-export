@@ -1,0 +1,7 @@
+resource "option-type-list" "tryg_ecp_vm_size" {
+  name = "tryg_ecp_vm_size"
+  uuid = "278b3115-7755-4692-9585-c74e7d38b175"
+  initialDataset = "'1 CPU, 512 MB','vm-512;170'"
+  labels = [ "dg_209523" ]
+  type = "manual"
+}

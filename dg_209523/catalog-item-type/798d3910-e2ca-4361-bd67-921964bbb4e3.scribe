@@ -1,0 +1,208 @@
+resource "catalog-item-type" "798d3910-e2ca-4361-bd67-921964bbb4e3" {
+  name = "dg_209523"
+  uuid = "798d3910-e2ca-4361-bd67-921964bbb4e3"
+  config = {
+    name = "FI<%= customOptions.tryg_ecp_ZoneWindows.split(';')[4] %><%= customOptions.tryg_ecp_appCode %><%= customOptions.tryg_ecp_environment.split(';')[1] %>W"
+    backup = {
+      backupJob = {
+        retentionCount = "2"
+        scheduleTypeId = "2"
+        syntheticFullEnabled = false
+        syntheticFullSchedule = null
+      }
+      backupRepository = 82
+      createBackup = false
+      jobAction = "new"
+      providerBackupType = -1
+      veeamManagedServer = ""
+    }
+    cloud = {
+      name = "<%= customOptions.tryg_ecp_ZoneWindows.split(';')[1] %>"
+      id = "<%= customOptions.tryg_ecp_ZoneWindows.split(';')[2] %>"
+    }
+    config = {
+      createUser = true
+      hostId = null
+      isEC2 = false
+      isVpcSelectable = true
+      nestedVirtualization = null
+      noAgent = true
+      poolProviderType = null
+      resourcePoolId = "pool-<%= customOptions.tryg_ecp_ZoneWindows.split(';')[6] %>"
+      smbiosAssetTag = null
+      vmwareFolderId = "/"
+    }
+    copies = 1
+    defaultExpandAdvanced = true
+    environment = "<%= customOptions.tryg_ecp_environment.split(';')[1] %>"
+    group = { name = "ServiceNow", id = "414" }
+    hideLock = true
+    hostName = "$${userInitials.toLowerCase()}-$${tenant.take(3).toLowerCase()}-$${cloudCode.take(3).toLowerCase()}-$${sequence}"
+    instance = {
+      expireDays = "<%= customOptions.tryg_expire_days %>"
+      shutdownDays = "<%= customOptions.tryg_shutdown_days %>"
+      userGroup = { id = "" }
+    }
+    layout = { id = "<%= customOptions.tryg_ecp_ZoneWindows.split(';')[3] %>" }
+    metadata = [
+      {
+        name = "user_backup"
+        listId = ""
+        strict = true
+        strictValue = true
+        value = "disabled"
+      },
+      {
+        name = "application"
+        listId = ""
+        strict = true
+        strictValue = true
+        value = "morpheus"
+      },
+      {
+        name = "owner"
+        listId = ""
+        strict = true
+        strictValue = true
+        value = "dgaharwar"
+      },
+      {
+        name = "costcenter"
+        listId = "173"
+        strict = true
+        strictValue = true
+        value = "$request.method $request.path"
+      },
+      {
+        name = "provisionedby"
+        listId = ""
+        strict = true
+        strictValue = true
+        value = "dgaharwar"
+      }
+    ]
+    networkInterfaces = [
+      {
+        ipMode = ""
+        network = {
+          hasPool = true
+          id = "network-<%= customOptions.tryg_ecp_ZoneWindows.split(';')[5] %>"
+          idName = "VLAN0002 - Internal Server 2"
+          pool = { name = "dg-mvm-pool", id = 369 }
+        }
+        networkInterfaceTypeId = 4
+        networkInterfaceTypeIdName = "VMXNET 3"
+        primaryInterface = true
+        showNetworkDhcpLabel = false
+        showNetworkPoolLabel = true
+      }
+    ]
+    plan = { id = "<%= customOptions.tryg_ecp_vm_size.split(';')[1] %>" }
+    ports = [
+      {
+        code = "ubuntu.22"
+        name = "SSH"
+        externalPort = 22
+        id = 9
+        internalPort = 22
+        loadBalance = false
+        loadBalancePort = null
+        loadBalanceProtocol = null
+        shortName = "ssh"
+        sortOrder = 1
+        visible = true
+      }
+    ]
+    showScale = false
+    storageControllers = [
+      {
+        name = "IDE 1"
+        category = "ide"
+        active = true
+        busNumber = "1"
+        displayOrder = 0
+        editable = false
+        id = 18
+        maxDevices = 2
+        removable = false
+        reservedUnitNumber = -1
+        typeId = 2
+        typeName = "IDE"
+        unitNumber = null
+      },
+      {
+        name = "IDE 0"
+        category = "ide"
+        active = true
+        busNumber = "0"
+        displayOrder = 1
+        editable = false
+        id = 17
+        maxDevices = 2
+        removable = false
+        reservedUnitNumber = -1
+        typeId = 2
+        typeName = "IDE"
+        unitNumber = null
+      },
+      {
+        name = "SCSI 0"
+        category = "scsi"
+        active = true
+        busNumber = "0"
+        displayOrder = 2
+        editable = false
+        id = 16
+        maxDevices = 31
+        removable = false
+        reservedUnitNumber = 7
+        typeId = 4
+        typeName = "SCSI LSI Logic Parallel"
+        unitNumber = null
+      }
+    ]
+    type = "ubuntu"
+    version = "18.04"
+    volumes = [
+      {
+        name = "root"
+        uuid = "d850aedd-9077-4dc8-9dab-81f1fcbb7a8a"
+        configurableIOPS = false
+        controllerId = 71414
+        controllerMountPoint = "71414:0:4:0"
+        datastoreId = "<%= customOptions.tryg_ecp_ZoneWindows.split(';')[4] %>"
+        displayOrder = 0
+        externalId = "2000"
+        id = 151877
+        internalId = "[ESXi-DC2-DEMO-LUN02] Morpheus Ubuntu 18.04 20240604/Morpheus Ubuntu 18.04 20240604.vmdk"
+        maxIOPS = null
+        maxStorage = 10737418240
+        minStorage = 5368709120
+        planResizable = true
+        readonlyName = false
+        resizeable = true
+        rootVolume = true
+        size = 10
+        storageType = 1
+        typeId = 1
+        uniqueId = null
+        unitNumber = "0"
+        vId = 50505
+        virtualImageId = 50505
+        volumeCustomizable = true
+      }
+    ]
+  }
+  dateCreated = "2025-03-19T21:29:20.000Z"
+  formType = "optionTypes"
+  labels = [ "dg_209523" ]
+  lastUpdated = "2025-03-21T17:33:00.000Z"
+  optionTypes = [
+    { code = "tryg_ecp_ZoneWindows" },
+    { code = "tryg_ecp_vm_size" },
+    { code = "tryg_ecp_environment" },
+    { code = "tryg_shutdown_days" },
+    { code = "tryg_expire_days" }
+  ]
+  refType = "InstanceType"
+}

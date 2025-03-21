@@ -1,0 +1,13 @@
+resource "option-type" "tryg_ecp_environment" {
+  code = "tryg_ecp_environment"
+  name = "tryg_ecp_environment"
+  uuid = "41e3411e-7677-4265-a6a3-ac6922690184"
+  fieldContext = "config.customOptions"
+  fieldLabel = "tryg_ecp_environment"
+  fieldName = "tryg_ecp_environment"
+  labels = [ "dg_209523" ]
+  optionList = { name = "tryg_ecp_environment" }
+  optionSource = "list"
+  required = true
+  type = "select"
+}
