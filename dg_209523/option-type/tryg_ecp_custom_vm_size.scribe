@@ -1,0 +1,13 @@
+resource "option-type" "tryg_ecp_custom_vm_size" {
+  code = "tryg_ecp_custom_vm_size"
+  name = "tryg_ecp_custom_vm_size"
+  uuid = "dbd62d9b-4127-4139-a798-67cec95b060b"
+  displayValueOnDetails = true
+  fieldContext = "config.customOptions"
+  fieldLabel = "VMsize"
+  fieldName = "tryg_ecp_custom_vm_size"
+  labels = [ "dg_209523" ]
+  optionList = { name = "tryg_ecp_custom_vm_size" }
+  optionSource = "list"
+  type = "select"
+}
