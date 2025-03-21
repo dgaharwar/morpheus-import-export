@@ -1,0 +1,13 @@
+resource "option-type" "tryg_ecp_ZoneWindows" {
+  code = "tryg_ecp_ZoneWindows"
+  name = "tryg_ecp_ZoneWindows"
+  uuid = "2979fd43-3182-48fe-95cc-4d2c2690fcd2"
+  fieldContext = "config.customOptions"
+  fieldLabel = "tryg_ecp_ZoneWindows"
+  fieldName = "tryg_ecp_ZoneWindows"
+  labels = [ "dg_209523" ]
+  optionList = { name = "tryg_ecp_ZoneWindows" }
+  optionSource = "list"
+  required = true
+  type = "select"
+}

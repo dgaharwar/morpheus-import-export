@@ -1,0 +1,9 @@
+resource "option-type" "tryg_expire_days" {
+  code = "tryg_expire_days"
+  name = "tryg_expire_days"
+  uuid = "8e045b13-7d5d-4198-ad41-489b6035fc13"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Expire Days"
+  fieldName = "tryg_expire_days"
+  labels = [ "dg_209523" ]
+}
